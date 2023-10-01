@@ -21,9 +21,18 @@ document.querySelectorAll('.btnDetail').forEach(item => {
         document.querySelector('.modalHarga').innerHTML = harga;
 
         const nohp = '62857123123';
+        let deskripsiClean = deskripsi.replace(/<[^>]*>?/gm, ""); // tambahkan regex untuk menghapus tag html seperti <br>, <p>, <i>, dll
         let pesan = `https://api.whatsapp.com/send?phone=${+628157771525}&text=Halo Kak, saya mau pesan produk ini ${deskripsi}`;
 
         document.querySelector('.btnBeli').href = pesan;
+        if (deskripsi == "<i>tidak ada informasi yang tersedia</i>") {
+      // tambahkan kondisi jika deskripsi tidak tersedia
+      document.querySelector(".btnBeli").classList.add("disabled"); // tambahkan class disabled jika deskripsi tidak tersedia
+    } else {
+      document.querySelector(".btnBeli").classList.remove("disabled"); // hapus class disabled jika deskripsi tersedia
+    }
+  });
+});
     });
 });
 
