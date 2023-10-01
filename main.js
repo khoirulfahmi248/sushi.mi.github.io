@@ -25,6 +25,7 @@ document.querySelectorAll('.btnDetail').forEach(item => {
         let pesan = `https://api.whatsapp.com/send?phone=${+628157771525}&text=Halo Kak, saya mau pesan produk ini ${deskripsi}`;
 
         document.querySelector('.btnBeli').href = pesan;
+        
         if (deskripsi == "<i>tidak ada informasi yang tersedia</i>") {
       // tambahkan kondisi jika deskripsi tidak tersedia
       document.querySelector(".btnBeli").classList.add("disabled"); // tambahkan class disabled jika deskripsi tidak tersedia
@@ -33,8 +34,7 @@ document.querySelectorAll('.btnDetail').forEach(item => {
     }
   });
 });
-    });
-});
+  
 
 function myFunction() {
     var x = document.getElementById("myTopnav");
