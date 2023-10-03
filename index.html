@@ -13,7 +13,7 @@
     <div class="container p-0 mb-4 mt-4 rounded-3 shadow bg-white">
       <!-- menu -->
       <nav class="d-md-flex p-4">
-        <div><h1>Sushi.mi</h1></div>
+        <div><h1>Suushi.mi</h1></div>
         <div class="ms-auto my-auto">
           <!--<ul class="list-inline m-0">
             <li class="list-inline-item mx-md-3"><a href="#collections" class="text-decoration-none text-dark fw-bold">Produk Kami</a></li>
@@ -77,7 +77,7 @@
             <div class="card-body">
               <p class="card-text">Ori</p>
             </div>
-            <div class="d-none deskripsi"><p>Berisi 6pcs kimbab saus mayones dan perlengkapan makan</p></div>
+            <div class="d-none deskripsi"><p>Variant ori berisi 6pcs kimbab saus mayones dan perlengkapan makan</p></div>
             <div class="card-footer d-md-flex">
               <a class="btn btn-sm btn-primary d-block btnDetail">detail</a>
               <span class="ms-auto text-danger fw-bold d-block text-center harga">Rp. 10.000,00</span>
@@ -149,19 +149,8 @@
             </div>
           </div>
         </div>
-       <!-- <div class="col mb-5">
-          <div class="card shadow">
-            <img src="" class="card-img-top" />
-            <div class="card-body">
-              <p class="card-text">coming soon</p>
-            </div>
-            <div class="card-footer d-md-flex">
-              <a class="btn btn-sm btn-primary d-block btnDetail">detail</a>
-              <span class="ms-auto text-danger fw-bold d-block text-center harga">Rp. xx.000,00</span>
-            </div>
-          </div>
-        </div>
-      </div>-->
+        
+      
       
       </div>
     
@@ -207,10 +196,19 @@
           <div class="modal-body row">
             <div class="modalImage col-md-6 col-12"></div>
             <div class="col-md-6 col-12">
-              <div class="modalDeskripsi"></div>
+              <div class="modalDeskripsi" id="modalDeskripsi"></div>
               <div class="d-md-flex">
-                <a href="" target="blank" class="btn btn-sm btn-warning d-block btnBeli">Beli Produk Ini</a>
+                <a href="https://api.whatsapp.com/send" target="blank" class="btn btn-sm btn-warning d-block btnBeli">Beli Produk Ini</a><br>
+               
+                
                 <span class="ms-auto text-danger fw-bold d-block text-center modalHarga"></span>
+                <div class="modalJumlah"></div>
+                <p>Jumlah</p>
+                <button id="decrement">-</button>
+           <span id="quantity">0</span>
+           <button id="increment">+</button>
+           <!-- <button id="refreshButton">Refresh</button> -->
+
               </div>
             </div>
           </div>
